@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700;900&display=swap');
+ /* Games */
+
+            .games{
+                padding: 0;
+
+            }
+
+            .games-row{
+                width: 100%;
+                margin: 0;
+                overflow: hidden;
+
+            }
+            .games .col-hot{
+                background-color: #000;
+                color: rgb(250, 153, 153);
+                height: 60px;
+            }
+            .games .col-hot h2{
+                line-height: 50px;
+                left:43.5%;
+                position: absolute;
+            }
+
+            .games-row>.col{
+                position: relative;
+                padding: 0;
+            }
+            .games-txt{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 15px;
+                text-align: center;
+                color: rgba(255,255, 255, 0.8);
+                box-sizing: border-box;
+                background-color: rgba(0, 0, 0, 0.6);
+                opacity: 0;
+                transform: scale(0);
+                transition: 0.5s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 1rem;
+            }
+
+            .games-row .col:hover .games-txt{
+                opacity: 1;
+                transform: scale(1);
+            }
+            .games-txt h4{
+                position: relative;
+            }
+            .games-row .col .games-txt h4::after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: -0.4rem;
+                height: 0;
+                border-bottom: 1px solid #888;
+                transition: 2s;
+            }
+            .games-row .col:hover .games-txt h4::after{
+                left: 0;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid games">
+            <div class="row row-hot">
+                <div class="col col-hot">
+                    <h2 class="text-center animate__animated animate__pulse animate__infinite"><small><i class="fas fa-fire-alt"></i></small>&nbsp;&nbsp;熱賣中</h2>
+                </div>
+            </div>
+            <div class="row row-cols-2 games-row row-cols-sm-3 ">
+                <div class="col">
+                    <img src="images/首頁背景/games/001.jpg" class="w-100" alt="">
+                    <div class="games-txt">
+                        <h4>漫威蜘蛛人</h4>
+                        <P>穿梭城市 拯救世界</P>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/首頁背景/games/002.jpg" class="w-100" alt="">
+                    <div class="games-txt">
+                        <h4>仁王2</h4>
+                        <P>成為武士 斬殺妖魔</P>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/首頁背景/games/003.jpg" class="w-100" alt="">
+                    <div class="games-txt">
+                        <h4>秘境探險:失落遺產</h4>
+                        <P>探索秘境 獲得寶藏</P>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <img src="images/首頁背景/games/004.jpg" class="w-100" alt="">
+                    <div class="games-txt">
+                        <h4>快打旋風 5</h4>
+                        <P>用技術戰勝敵人</P>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/首頁背景/games/005.jpg" class="w-100" alt="">
+                    <div class="games-txt">
+                        <h4>魔物獵人:世界</h4>
+                        <P>成為獵龍勇士</P>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/首頁背景/games/006.jpg" class="w-100" alt="">
+                    <div class="games-txt">
+                        <h4>刺客教條:梟雄</h4>
+                        <P>點燃工業革命的戰火</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper.js -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

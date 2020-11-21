@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>營火計畫-首頁</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css"
+    />
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#myTab a:first").click(function () {
+          $("#tabmenu1").addClass("fade");
+        });
+      });
+    </script>
+    <style>
+      * {
+        font-family: 微軟正黑體;
+        list-style: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+
+      .masthead {
+        padding-top: 10rem;
+        padding-bottom: calc(18rem - 4.5rem);
+        background-image: url(/img/bg/bg-2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: auto;
+        height: 30vh;
+      }
+      .navbar {
+        -webkit-box-shadow: 0 8px 6px -6px #444;
+        -moz-box-shadow: 0 8px 6px -6px #555;
+        box-shadow: 0 8px 6px -6px #777;
+      }
+      /* pr 單商品card CSS */
+      .pr_loction_des {
+        color: rgb(110, 109, 109);
+      }
+
+      .pr_campitem {
+        list-style: none;
+        display: inline-block;
+        width: 6rem;
+        height: 3rem;
+        border: 1px solid black;
+        font-size: 15px;
+        text-align: center;
+      }
+      .pr_camptype {
+        list-style: none;
+        display: inline-block;
+        width: 4rem;
+        height: 1rem;
+        border: 1px solid rgb(110, 109, 109);
+        border-radius: 30px 30px 30px 30px;
+        font-size: 13px;
+        text-align: center;
+        padding-bottom: 1rem;
+        color: rgb(110, 109, 109);
+      }
+
+      .pr_carditem {
+        transition: all 0.5s;
+      }
+
+      .pr_carditem:hover {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        transform: translate3d(0, -1rem, 0);
+        /*transform: scale(1.5,1.5);*/
+        /*transform: skew(30deg,0);*/
+      }
+
+      .pr_type_loction {
+        border-radius: 30px 30px 30px 30px;
+      }
+
+      .pr_line {
+        background-image: linear-gradient(#14b9eb, #14b9eb);
+        background-position: left bottom;
+        background-size: 0 2.5px;
+        background-repeat: no-repeat;
+        transition: all 0.15s;
+      }
+
+      .pr_line:hover {
+        background-size: 100% 2.5px;
+        border: none;
+      }
+
+      .nav-tabs .nav-link.active {
+        background-color: rgba(255, 255, 255, 0);
+      }
+
+      .pr_type_sea_boder {
+        border-radius: 5px;
+      }
+
+      .text-uppercase {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      @media screen and (max-width: 572px) {
+        .pr_type_loction_lg {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 572px) {
+        .pr_type_loction_sm {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar-expand-md 是指在 md 範圍以上才會直接展開選項 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
+      <a class="navbar-brand js-scroll-trigger p-0" href="index.html"
+        ><img src="/logo/logo-04.png" alt="" class="" height="45px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0">
+          <li class="dropdown nav-item">
+            <a
+              href="#"
+              data-toggle="dropdown"
+              class="dropdown-toggle nav-link js-scroll-trigger atextcolor"
+              >購物商城</a
+            >
+            <ul
+              id="dropdown"
+              class="dropdown-menu bg-dark"
+              role="menu"
+              aria-labelledby="tutorial"
+            >
+              <li role="presentation">
+                <a
+                  href="product_camping.html"
+                  class="nav-link js-scroll-trigger atextcolor"
+                  >找營地</a
+                >
+              </li>
+              <li role="presentation">
+                <a href="##" class="nav-link js-scroll-trigger atextcolor"
+                  >買裝備</a
+                >
+              </li>
+              <li role="presentation">
+                <a href="##" class="nav-link js-scroll-trigger atextcolor"
+                  >玩體驗</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item text-info">
+            <a class="nav-link js-scroll-trigger text-info" href="#"
+              >營火傳遞</a
+            >
+          </li>
+          <li class="nav-item text-info">
+            <a
+              class="nav-link js-scroll-trigger text-info"
+              href="#"
+              aria-disabled="true"
+              >關於我們</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#modal-id" data-toggle="modal"
+              ><i class="glyphicon glyphicon-log-in"></i>登入</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="masthead mb-3">
+      <div class="container">
+        <div class="row text-center align-self-center justify-content-center">
+          <div class="col-12 col-lg-12">
+            <div class="offset-4 col-4 col-lg-4 mb-2">
+              <h3 class="text-uppercase font-weight-bold text-white">露營地</h3>
+            </div>
+          </div>
+
+          <div class="col-8 col-lg-8">
+            <ul id="myTab" class="nav nav-tabs border-0">
+              <li class="nav-item offset-3 col-3 p-0">
+                <a
+                  class="pr_line nav-link text-white border-0 mb-2 font-weight-bold"
+                  data-toggle="tab"
+                  href="#tabmenu1"
+                  >關鍵字搜尋</a
+                >
+              </li>
+              <li class="nav-item col-3 p-0">
+                <a
+                  class="pr_line nav-link text-white border-0 mb-2 font-weight-bold"
+                  data-toggle="tab"
+                  href="#tabmenu2"
+                  >分類搜尋</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="tabmenu1" class="tab-pane active">
+                <div class="col-12 col-lg-12 p-0">
+                  <div class="input-group">
+                    <input type="text" class="form-control col-lg-8" />
+                    <a href="#" class="col-lg-4 btn btn-info btn-block m-0"
+                      >搜尋</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div id="tabmenu2" class="tab-pane fade">
+                <div class="pr_type_sea_boder col-12 col-lg-12 bg-white pt-2">
+                  <div class="row">
+                    <div class="col-4 col-lg-4 small text-left">
+                      <ul class="p-0 m-0">
+                        <li class="pb-1"><input type="checkbox" />夜景</li>
+                        <li class="pb-1"><input type="checkbox" />雲海</li>
+                        <li class="pb-1"><input type="checkbox" />近溪流</li>
+                      </ul>
+                    </div>
+                    <div class="col-4 col-lg-4 small text-left">
+                      <ul class="p-0 m-0">
+                        <li class="pb-1"><input type="checkbox" />遊戲區</li>
+                        <li class="pb-1"><input type="checkbox" />出租裝備</li>
+                        <li class="pb-1"><input type="checkbox" />有雨棚</li>
+                      </ul>
+                    </div>
+                    <div class="col-4 col-lg-4 small text-left">
+                      <ul class="p-0 m-0">
+                        <li class="pb-1"><input type="checkbox" />遊戲區</li>
+                        <li class="pb-1"><input type="checkbox" />出租裝備</li>
+                        <li class="pb-1"><input type="checkbox" />有雨棚</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 p-0">
+                      <a href="#" class="btn btn-info btn-block m-0">搜尋</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="pr_type_loction_lg mb-4 text-center">
+      <ul class="p-0">
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          全部
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          大台北
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          桃園
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          新竹
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          苗栗
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          中彰投
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          雲嘉南
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          高屏
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          宜蘭
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          花東
+        </li>
+        <li class="pr_type_loction btn btn-outline-info d-inline-block mr-2">
+          離島
+        </li>
+      </ul>
+    </div>
+    <div class="pr_type_loction_sm dropdown mb-3">
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle btn-block"
+        data-toggle="dropdown"
+      >
+        選擇地區
+      </button>
+      <ul
+        id="dropdown"
+        class="dropdown-menu w-100 text-center"
+        role="menu"
+        aria-labelledby="tutorial"
+      >
+        <li class="d-block"><a href="">全部</a></li>
+        <li class="d-block"><a href="">大台北</a></li>
+        <li class="d-block"><a href="">桃園</a></li>
+        <li class="d-block"><a href="">新竹</a></li>
+        <li class="d-block"><a href="">苗栗</a></li>
+        <li class="d-block"><a href="">中彰投</a></li>
+        <li class="d-block"><a href="">雲嘉南</a></li>
+        <li class="d-block"><a href="">高屏</a></li>
+        <li class="d-block"><a href="">宜蘭</a></li>
+        <li class="d-block"><a href="">花東</a></li>
+        <li class="d-block"><a href="">離島</a></li>
+      </ul>
+    </div>
+    <!-- pr 單商品card CSS -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-5">
+          <a href="/iproduct_camping_item.html" style="text-decoration: none">
+            <div class="card pr_carditem">
+              <img
+                class="card-img-top"
+                src="/img/bg/bg-4.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="pr_loction_des small m-0 pb-2">
+                  <i class="fas fa-map-marker-alt text-info pr-2"></i
+                  >台北市大安區
+                </p>
+                <h5 class="card-title font-weight-bold text-dark">
+                  北市士林 菁山遊憩區
+                </h5>
+                <ul class="p-0">
+                  <li
+                    class="pr_camptype align-self-center justify-content-center"
+                  >
+                    <a>高海拔</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>中部營區</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>近河邊</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>遊戲區</a>
+                  </li>
+                </ul>
+                <hr />
+                <div class="row align-items-center">
+                  <p class="col-12 m-0 mb-1 small">
+                    最早可預定日期：2020年12月31日
+                  </p>
+                  <p class="col-4 text-warning m-0">
+                    <i class="fas fa-star pr-1"></i>4.5
+                  </p>
+                  <p class="col-8 text-info font-weight-bold h4 text-right">
+                    $NT 500
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-5">
+          <a href="/iproduct_camping_item.html" style="text-decoration: none">
+            <div class="card pr_carditem">
+              <img
+                class="card-img-top"
+                src="/img/bg/bg-4.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="pr_loction_des small m-0 pb-2">
+                  <i class="fas fa-map-marker-alt text-info pr-2"></i
+                  >台北市大安區
+                </p>
+                <h5 class="card-title font-weight-bold text-dark">
+                  北市士林 菁山遊憩區
+                </h5>
+                <ul class="p-0">
+                  <li
+                    class="pr_camptype align-self-center justify-content-center"
+                  >
+                    <a>高海拔</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>中部營區</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>近河邊</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>遊戲區</a>
+                  </li>
+                </ul>
+                <hr />
+                <div class="row align-items-center">
+                  <p class="col-12 m-0 mb-1 small">
+                    最早可預定日期：2020年12月31日
+                  </p>
+                  <p class="col-4 text-warning m-0">
+                    <i class="fas fa-star pr-1"></i>4.5
+                  </p>
+                  <p class="col-8 text-info font-weight-bold h4 text-right">
+                    $NT 500
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-5">
+          <a href="/iproduct_camping_item.html" style="text-decoration: none">
+            <div class="card pr_carditem">
+              <img
+                class="card-img-top"
+                src="/img/bg/bg-4.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="pr_loction_des small m-0 pb-2">
+                  <i class="fas fa-map-marker-alt text-info pr-2"></i
+                  >台北市大安區
+                </p>
+                <h5 class="card-title font-weight-bold text-dark">
+                  北市士林 菁山遊憩區
+                </h5>
+                <ul class="p-0">
+                  <li
+                    class="pr_camptype align-self-center justify-content-center"
+                  >
+                    <a>高海拔</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>中部營區</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>近河邊</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>遊戲區</a>
+                  </li>
+                </ul>
+                <hr />
+                <div class="row align-items-center">
+                  <p class="col-12 m-0 mb-1 small">
+                    最早可預定日期：2020年12月31日
+                  </p>
+                  <p class="col-4 text-warning m-0">
+                    <i class="fas fa-star pr-1"></i>4.5
+                  </p>
+                  <p class="col-8 text-info font-weight-bold h4 text-right">
+                    $NT 500
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-5">
+          <a href="/iproduct_camping_item.html" style="text-decoration: none">
+            <div class="card pr_carditem">
+              <img
+                class="card-img-top"
+                src="/img/bg/bg-4.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="pr_loction_des small m-0 pb-2">
+                  <i class="fas fa-map-marker-alt text-info pr-2"></i
+                  >台北市大安區
+                </p>
+                <h5 class="card-title font-weight-bold text-dark">
+                  北市士林 菁山遊憩區
+                </h5>
+                <ul class="p-0">
+                  <li
+                    class="pr_camptype align-self-center justify-content-center"
+                  >
+                    <a>高海拔</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>中部營區</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>近河邊</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>遊戲區</a>
+                  </li>
+                </ul>
+                <hr />
+                <div class="row align-items-center">
+                  <p class="col-12 m-0 mb-1 small">
+                    最早可預定日期：2020年12月31日
+                  </p>
+                  <p class="col-4 text-warning m-0">
+                    <i class="fas fa-star pr-1"></i>4.5
+                  </p>
+                  <p class="col-8 text-info font-weight-bold h4 text-right">
+                    $NT 500
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mb-5">
+          <a href="/iproduct_camping_item.html" style="text-decoration: none">
+            <div class="card pr_carditem">
+              <img
+                class="card-img-top"
+                src="/img/bg/bg-4.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <p class="pr_loction_des small m-0 pb-2">
+                  <i class="fas fa-map-marker-alt text-info pr-2"></i
+                  >台北市大安區
+                </p>
+                <h5 class="card-title font-weight-bold text-dark">
+                  北市士林 菁山遊憩區
+                </h5>
+                <ul class="p-0">
+                  <li
+                    class="pr_camptype align-self-center justify-content-center"
+                  >
+                    <a>高海拔</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>中部營區</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>近河邊</a>
+                  </li>
+                  <li class="pr_camptype">
+                    <a>遊戲區</a>
+                  </li>
+                </ul>
+                <hr />
+                <div class="row align-items-center">
+                  <p class="col-12 m-0 mb-1 small">
+                    最早可預定日期：2020年12月31日
+                  </p>
+                  <p class="col-4 text-warning m-0">
+                    <i class="fas fa-star pr-1"></i>4.5
+                  </p>
+                  <p class="col-8 text-info font-weight-bold h4 text-right">
+                    $NT 500
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row small text-white">
+          <div class="col-12 col-lg-3 small">
+            <div class="row">
+              <div class="col-6 col-lg-8 mb-2">
+                <img src="/logo/logo-04.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <p>體驗，遇見更美好的自己</p>
+            <p>
+              Niceday 玩體驗成立於
+              2013年，提供特色體驗預訂服務，我們將台灣好玩的各種體驗發掘出來，提供給喜愛台灣、熱愛生活的人。
+            </p>
+          </div>
+          <div class="col-4 col-lg-2 small">
+            <p>認識我們</p>
+            <ul class="p-0">
+              <li>關於營火計畫</li>
+              <li>露營攻略部落格</li>
+              <li>加入我們</li>
+            </ul>
+          </div>
+          <div class="col-4 col-lg-2 small">
+            <p>合作營火</p>
+            <ul class="p-0">
+              <li>商家加入</li>
+              <li>聯合行銷</li>
+              <li>企業合作</li>
+              <li>同業交易</li>
+            </ul>
+          </div>
+          <div class="col-4 col-lg-2 small">
+            <p>網站資訊</p>
+            <ul class="p-0">
+              <li>常見問題 FAQ</li>
+              <li>服務條款</li>
+              <li>隱私權條款</li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3 small">
+            <p>追蹤我們</p>
+            <ul class="p-0">
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-facebook-square"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-line"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-youtube-square"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-instagram-square"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-twitter-square"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="row text-white">
+          <span
+            class="col-12 col-lg-2 small text-muted text-center text-lg-left"
+          >
+            © camping, Inc.
+          </span>
+          <span
+            class="col-12 col-lg-10 small text-center text-lg-right text-muted"
+          >
+            客服信箱：service@camping.tw | 客服中心：02-8912-6200 |
+            服務時間：週一～週日 10:00 - 18:00
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/js/bootstrap.min.js"></script> -->
+    <script src="/js/popper.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>營火計畫-首頁</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css"
+    />
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          // check if scroll event happened
+          if ($(document).scrollTop() > 10) {
+            // check if user scrolled more than 50 from top of the browser window
+            $(".navbar-fixed-top").css("background-color", "#f8f8f8");
+            $("nav").addClass("navbarshadow");
+            $("a").addClass("text-info");
+            $("#dropdown").removeClass("bg-dark");
+            // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+          } else {
+            $(".navbar-fixed-top").css("background-color", "transparent");
+            $("nav").removeClass("navbarshadow");
+            $("a").removeClass("text-info");
+            $("#dropdown").addClass("bg-dark");
+            // if not, change it back to transparent
+          }
+        });
+      });
+    </script>
+
+    <style>
+      * {
+        font-family: 微軟正黑體;
+        list-style: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      #carousel-1,
+      #carousel-2,
+      #carousel-3 {
+        padding-top: 20rem;
+        padding-bottom: calc(20rem - 4.5rem);
+      }
+
+      #carousel-1 {
+        background: linear-gradient(
+            to bottom,
+            rgba(92, 77, 66, 0.5) 0%,
+            rgba(92, 77, 66, 0.5) 100%
+          ),
+          url("/img/bg/bg-1.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+      }
+      #carousel-2 {
+        background: linear-gradient(
+            to bottom,
+            rgba(92, 77, 66, 0.5) 0%,
+            rgba(92, 77, 66, 0.5) 100%
+          ),
+          url("/img/bg/bg-2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+      }
+      #carousel-3 {
+        background: linear-gradient(
+            to bottom,
+            rgba(92, 77, 66, 0.5) 0%,
+            rgba(92, 77, 66, 0.5) 100%
+          ),
+          url("/img/bg/bg-4.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+      }
+
+      .carousel-caption {
+        top: 35%;
+      }
+
+      .navbar-light .navbar-nav .nav-link {
+        color: white;
+      }
+      .navbarshadow {
+        -webkit-box-shadow: 0 8px 6px -6px #444;
+        -moz-box-shadow: 0 8px 6px -6px #555;
+        box-shadow: 0 8px 6px -6px #777;
+      }
+
+      .divider {
+        max-width: 15rem;
+        border-width: 0.2rem;
+        border-color: rgb(7, 161, 189);
+      }
+
+      .i-size {
+        font-size: 4rem;
+        color: rgb(7, 161, 189);
+      }
+
+      .navFixed {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        min-width: 100%;
+        transition: opacity 0.5s ease-out;
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar-expand-md 是指在 md 範圍以上才會直接展開選項 -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light py-3 fixed-top navbar-fixed-top"
+      id="navsr"
+    >
+      <a class="navbar-brand js-scroll-trigger p-0" href="index.html" id="navbr"
+        ><img src="/logo/logo-04.png" alt="" class="" height="45px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0">
+          <li class="dropdown nav-item">
+            <a
+              href="#"
+              data-toggle="dropdown"
+              class="dropdown-toggle nav-link js-scroll-trigger atextcolor"
+              >購物商城</a
+            >
+            <ul
+              id="dropdown"
+              class="dropdown-menu bg-dark"
+              role="menu"
+              aria-labelledby="tutorial"
+            >
+              <li role="presentation">
+                <a
+                  href="product_camping.html"
+                  class="nav-link js-scroll-trigger atextcolor"
+                  >找營地</a
+                >
+              </li>
+              <li role="presentation">
+                <a href="##" class="nav-link js-scroll-trigger atextcolor"
+                  >買裝備</a
+                >
+              </li>
+              <li role="presentation">
+                <a href="##" class="nav-link js-scroll-trigger atextcolor"
+                  >玩體驗</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item text-info">
+            <a class="nav-link js-scroll-trigger atextcolor" href="#"
+              >營火傳遞</a
+            >
+          </li>
+          <li class="nav-item text-info">
+            <a
+              class="nav-link js-scroll-trigger atextcolor"
+              href="#"
+              aria-disabled="true"
+              >關於我們</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#Login" data-toggle="modal"
+              ><i class="glyphicon glyphicon-log-in"></i>登入</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="Login" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">會員登入</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row m-5">
+                <div class="col-6">
+                  <img src="/img/bg-2.jpg" class="img-fluid" />
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="aa">帳號</label>
+                    <input
+                      type="text"
+                      name="aa"
+                      id="aa"
+                      placeholder="請輸入帳號"
+                      class="form-control"
+                    />
+                    <label for="aa">密碼</label>
+                    <input
+                      type="text"
+                      name="aa"
+                      id="aa"
+                      placeholder="請輸入密碼"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              取消
+            </button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              登入
+            </button>
+            <a
+              href="#Registered"
+              class="btn btn-default"
+              data-toggle="modal"
+              data-dismiss="modal"
+              >註冊</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Registered" class="modal fade">
+      <div
+        class="modal-dialog modal-dialog-centered modal-lg"
+        style="max-width: 70%"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">會員註冊</h5>
+            <p>(<font color="red">*</font>必填)</p>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-4">
+                  <img src="/img/bg/bg-2.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="col-8">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="aa">帳號</label><font color="red">*</font>
+                        <input
+                          type="text"
+                          placeholder="請輸入帳號"
+                          class="form-control"
+                        />
+                        <label for="aa">密碼</label><font color="red">*</font>
+                        <input
+                          type="password"
+                          placeholder="請輸入密碼"
+                          class="form-control"
+                        />
+                        <label for="aa">確認密碼</label
+                        ><font color="red">*</font>
+                        <input
+                          type="password"
+                          placeholder="請輸入密碼"
+                          class="form-control"
+                        />
+                        <label for="aa">姓名</label><font color="red">*</font>
+                        <input
+                          type="password"
+                          placeholder="請輸入姓名"
+                          class="form-control"
+                        />
+                        <label for="aa">暱稱</label><font color="red">*</font>
+                        <input
+                          type="password"
+                          placeholder="請輸入密碼"
+                          class="form-control"
+                        />
+                        <label for="aa">電子信箱</label
+                        ><font color="red">*</font>
+                        <input
+                          type="password"
+                          placeholder="請輸入有效的電子信箱"
+                          class="form-control"
+                        />
+                        <label for="aa">生日</label><font color="red">*</font>
+                        <input
+                          type="password"
+                          placeholder="請輸入生日"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-6">
+                        <label for="aa">地址</label>
+                        <input
+                          type="password"
+                          placeholder="非必填"
+                          class="form-control"
+                        />
+                        <label for="aa">身份證字號</label>
+                        <input
+                          type="password"
+                          placeholder="非必填"
+                          class="form-control"
+                        />
+                        <label for="aa">身高</label>
+                        <input
+                          type="password"
+                          placeholder="非必填"
+                          class="form-control"
+                        />
+                        <label for="aa">體重</label>
+                        <input
+                          type="password"
+                          placeholder="非必填"
+                          class="form-control"
+                        />
+                        <label for="aa">鞋號</label>
+                        <input
+                          type="password"
+                          placeholder="非必填"
+                          class="form-control"
+                        />
+                        <label for="aa">備註</label>
+                        <input
+                          type="password"
+                          placeholder="非必填"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              重填
+            </button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              送出
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="masthead">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col p-0">
+            <div
+              class="carousel slide"
+              data-ride="carousel"
+              data-interval="3000"
+              id="picShow"
+            >
+              <ul class="carousel-indicators py-5">
+                <li
+                  data-target="#picShow"
+                  data-slide-to="0"
+                  class="active aaa"
+                ></li>
+                <li data-target="#picShow" data-slide-to="1" class="aaa"></li>
+                <li data-target="#picShow" data-slide-to="2" class="aaa"></li>
+              </ul>
+              <div class="carousel-inner">
+                <div class="carousel-caption">
+                  <div class="container">
+                    <div
+                      class="row h-100 align-items-center justify-content-center text-center"
+                    >
+                      <div class="col-lg-10 align-self-start">
+                        <h1
+                          class="text-uppercase text-white font-weight-bold"
+                          style="text-shadow: 2px 2px #444"
+                        >
+                          現在出發冒險去
+                        </h1>
+                      </div>
+                      <div class="col-lg-8 align-self-baseline">
+                        <p class="font-weight-light mb-5">
+                          打造獨一無二的露營計畫
+                        </p>
+                      </div>
+                      <div class="col-8 col-lg-8 bg-white">
+                        <ul
+                          class="nav justify-content-start nav-tabs mt-2 border-info"
+                        >
+                          <li class="nav-item">
+                            <a
+                              href=""
+                              class="nav-link text-black mr-1 active"
+                              data-toggle="tab"
+                              >露營地</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href=""
+                              class="nav-link text-black mr-1"
+                              data-toggle="tab"
+                              >裝備</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href=""
+                              class="nav-link text-black mr-1"
+                              data-toggle="tab"
+                              >活動</a
+                            >
+                          </li>
+                        </ul>
+                        <div class="input-group my-2">
+                          <input type="text" class="form-control col-lg-8" />
+                          <a
+                            href="#"
+                            class="col-lg-4 btn btn-info btn-block m-0"
+                            >搜尋</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item vh-100 active" id="carousel-1"></div>
+                <div class="carousel-item vh-100" id="carousel-2"></div>
+                <div class="carousel-item vh-100" id="carousel-3"></div>
+                <a
+                  href="#picShow"
+                  data-slide="prev"
+                  class="carousel-control-prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a
+                  href="#picShow"
+                  data-slide="next"
+                  class="carousel-control-next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mt-5"><h4>露營輕鬆愜意</h4></div>
+        <hr class="col-lg-12 divider mt-0 mb-4" />
+      </div>
+      <div class="row mb-5 text-center">
+        <div class="col-4">
+          <i class="fas fa-campground i-size my-3"></i>
+          <h3>營地</h3>
+          應當貼布家人，失去刺激我只直接轉換做法供應商聯想我就重大手上直接聽到，女士武器。
+        </div>
+        <div class="col-4">
+          <i class="fas fa-shopping-bag i-size my-3"></i>
+          <h3>裝備</h3>
+          時期行動美元開了節省依舊如果您轉變，把我放棄保留表達取得中心短信幫你，能源人家。
+        </div>
+        <div class="col-4">
+          <i class="fas fa-ticket-alt i-size my-3"></i>
+          <h3>行程</h3>
+          家裡人群包裝前來成本主題幾乎官方庫存最快適應力道清楚，總部很熱簡體主動，渠道小。
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row small text-white">
+          <div class="col-12 col-lg-3 small">
+            <div class="row">
+              <div class="col-6 col-lg-8 mb-2">
+                <img src="/logo/logo-04.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <p>體驗，遇見更美好的自己</p>
+            <p>
+              Niceday 玩體驗成立於
+              2013年，提供特色體驗預訂服務，我們將台灣好玩的各種體驗發掘出來，提供給喜愛台灣、熱愛生活的人。
+            </p>
+          </div>
+          <div class="col-4 col-lg-2 small">
+            <p>認識我們</p>
+            <ul class="p-0">
+              <li>關於營火計畫</li>
+              <li>露營攻略部落格</li>
+              <li>加入我們</li>
+            </ul>
+          </div>
+          <div class="col-4 col-lg-2 small">
+            <p>合作營火</p>
+            <ul class="p-0">
+              <li>商家加入</li>
+              <li>聯合行銷</li>
+              <li>企業合作</li>
+              <li>同業交易</li>
+            </ul>
+          </div>
+          <div class="col-4 col-lg-2 small">
+            <p>網站資訊</p>
+            <ul class="p-0">
+              <li>常見問題 FAQ</li>
+              <li>服務條款</li>
+              <li>隱私權條款</li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3 small">
+            <p>追蹤我們</p>
+            <ul class="p-0">
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-facebook-square"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-line"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-youtube-square"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-instagram-square"></i>
+              </li>
+              <li class="d-inline-block h2 pr-1">
+                <i class="fab fa-twitter-square"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="row text-white">
+          <span
+            class="col-12 col-lg-2 small text-muted text-center text-lg-left"
+          >
+            © camping, Inc.
+          </span>
+          <span
+            class="col-12 col-lg-10 small text-center text-lg-right text-muted"
+          >
+            客服信箱：service@camping.tw | 客服中心：02-8912-6200 |
+            服務時間：週一～週日 10:00 - 18:00
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+  </body>
+</html>
