@@ -49,12 +49,36 @@
         var calendarEl = document.getElementById("calendar");
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: "dayGridMonth",
+          headerToolbar: {
+            right: 'prev,next',
+            left: 'title'
+          },
           titleFormat: {
             // will produce something like "Tuesday, September 18, 2018"
             month: "short",
             year: "numeric",
           },
-          dayHeaderFormat: { weekday: "short" },
+          showNonCurrentDates: false,
+          dayHeaderFormat: { weekday: "narrow" },
+          dayCellContent: function (arg) {
+            return arg.date.getDate();
+          },
+          events: [
+            {
+              title: 'GG test',
+              allDay: true,
+              start: '2020-11-12',
+              end: '2020-11-13',
+              display: "block",
+              backgroundColor: 'red',
+              title: 'yo'
+            }
+            // more events ...
+          ],
+          eventDidMount: function (info) {
+            console.log(info.event.extendedProps);
+            // {description: "Lecture", department: "BioChemistry"}
+          },
           locale: "zh-tw",
           handleWindowResize: true,
         });
